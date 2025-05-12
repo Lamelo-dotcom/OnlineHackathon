@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <title>Add Team - Online Hackathon Platform</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/admin_styling.css">
+        <style>
+            .container{
+                display: flex;
+                flex-direction: column;
+                margin: 20px auto;
+                padding: 10px;
+                border-radius: 30px;
+                width: 450px;
+                text-align: center;
+                font-weight: bold;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+                border: 2px solid black;
+                font-family: Arial, sans-serif;
+            }
+            label {
+                display: block;
+                font-weight: bold;
+            }
+            input[type="text"],
+            input[type="date"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid lightskyblue;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            textarea {
+                resize: vertical;
+            }
+            @media (max-width: 600px) {
+                .container {
+                    width: 90%;
+                    padding: 15px;
+                }
+            }
+            .modal {
+                display: flex;  /* Make sure modal is displayed */
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-content {
+                background: white;
+                position: relative;
+                color: black;
+                padding: 20px;
+                border-radius: 10px;
+                width: 400px;
+                max-width: 80%;
+                text-align: center;
+            }
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .close:hover {
+                color: red;
+                transform: scale(1.4);
+            }
+            .back {
+                position: absolute;
+                top: 10px;
+                left: 15px;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .back :hover{
+                color: red;
+                transform: scale(1.4); 
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+                background-color:  #21ced7;
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+
+            button:hover {
+                box-shadow: 0 0 20px rgba(255,255,255,0.7);
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Hackathon Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin_dashboard.jsp">Dashboard</a></li>
+                    <li><a href="#">Manage Hackathons</a></li>
+                    <li><a href="#">Participants</a></li>
+                    <li><a href="#">Submissions</a></li>
+                    <li><a href="#">Judging</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="LogoutServlet.do">Logout</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="welcome-message">
+                    <h1>Welcome, Sakhile Lusiba</h1>
+                </div>
+                <div class="notifications">
+                    <button class="notification-button" onclick="toggleNotifications()">
+                        <i class="fa fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div id="notification-panel" class="notification-panel">
+                        <ul>
+                            <li>New notification 1</li>
+                            <li>New notification 2</li>
+                            <li>New notification 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <main class="main-content">
+                <div class="container">
+                    <form action="CreateHackathonServlet.do" method="POST">
+                        <label for="hackathonName">Hackathon Name</label>
+                        <input type="text" id="hackathonName" name="hackathonName" required>
+
+                        <label for="hackathonDescription">Description</label>
+                        <textarea id="hackathonDescription" name="description" rows="4" required></textarea>
+
+                        <label for="regClosingDate">Registration closing date</label>
+                        <input type="date" id="regClosingDate" name="regClosingDate" required>
+
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" name="startDate" required>
+
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" name="endDate" required>
+
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" required>
+
+                        <button type="submit" class="btn">Create Hackathon</button>
+
+                    </form>
+                </div>
+            </main>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <a href="add_judging_criteria.html"><span class="back">&DoubleLeftArrow;</span></a>
+                <a href="create_hackathon.html"><span class="close">&times;</span></a>
+                <h2>Add Team/Group</h2>
+                <form id="teamForm" action="AddTeamServlet.do" method="post">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" name="teamName" required>
+                    <label for="description">Team Description</label>
+                    <input type="text" id="description" name="description" required>
+                    <button onclick="create_hackathon.html" type="button">Skip</button>
+                    <button type="submit">Add Team</button>
+                    <button type="button" onclick="location.href = 'hackathon_creation_confirmation.html'">Done</button>
+                </form>
+            </div>            
+        </div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ensure modal is displayed
+            var modal = document.querySelector(".modal");
+            if (modal) {
+                modal.style.display = "flex";
+            }
+
+            // Close modal when clicking close button
+            var closeButton = document.querySelector(".close");
+            if (closeButton) {
+                closeButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    modal.style.display = "none";
+                });
+            }
+        });
+        
+    </script>
+
+</html>
+

@@ -1,0 +1,132 @@
+root{
+            --primary: #0A0F1C;
+            --primary_accent: #1FB6FF;
+            --background: #010102de;
+            --secondary: #9023f0;
+            --accent: #A3C9A8;
+            --text: #E6F0FF;
+            --highlight: #FF6F00;
+}
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
+}
+
+.stats-box {
+    background-color: #100053;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+.stats-box:hover {
+    background-color: #3e0099;
+    transform: scale(1.1);
+}
+
+.stats-box h3 {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3e0099;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    color: white;
+
+    background-color: #100053;
+}
+
+table td button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+table td button:hover {
+    background-color: #3e0099;
+    transform: scale(1.05);
+}
+.hackathon_grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px;
+    padding: 20px;
+}
+.hackathon_container {
+    background-color: #000; /* black background */
+    color: #fff; /* white text for contrast */
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+.hackathon_container h4 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #21ced7;
+}
+
+.hackathon_container p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.hackathon_container button {
+    padding: 10px 16px;
+    margin-right: 10px;
+    background-color: #21ced7;
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.hackathon_container button:hover {
+    background-color: #3e0099;
+    transform: scale(1.1);
+}
+

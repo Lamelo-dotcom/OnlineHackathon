@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Hackathon Platform</title>
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+            .home_container{
+                display: flex;
+                height: 100%;
+            }
+
+            .home_content{
+                width: 100%;
+                padding: 20px 30px;
+                text-align: center;
+                font-family: sans-serif;
+                font-weight: bolder;
+                background-color: #f3f2f4;
+            }
+            .home_content button{
+
+                padding: 10px 20px;
+                font-size: 1rem;
+                background-color: #100053;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .home_content button:hover{
+                background-color: black;
+                transform: scale(1.1); 
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            }
+            .features{
+                position: relative;
+                width: 100%
+            }
+            .features img{
+                width: 100%;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .features button {
+                position: absolute;
+                top: 61%;
+                left: 59%;
+                transform: translate(-55%, -45%);
+                padding: 15px 30px;
+                font-size: 1rem;
+                background-color: #100053;
+                color: white;
+                border: none;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            }
+
+            .features button:hover {
+                background-color: #100053;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="image/istockphoto-1216719274-612x612.jpg" alt="logo_image">
+                <h1 id="heading">Online Hosting Hackathon Platform</h1>
+            </div>
+            <nav class="nav_links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="register.jsp">Register</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="home_container">
+            <diV class="home_content">
+                <h2>Join the Hackathon</h2>
+                <p>Participate, innovate, and win amazing prizes!</p>
+                <button onclick="location.href='login.jsp'">Get Started</button>
+            </diV>
+            <div class="features">
+                <img src="image/images (2).jpg" alt="image">
+                <button>Explore Features</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Online Hosting Hackathon Platform";
+            const heading = document.getElementById("heading");
+            let index = 0;
+            function typeEffect() {
+                if (index < text.length) {
+                    heading.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 100);
+                }
+            }
+
+            heading.innerHTML = "";
+            typeEffect();
+        });
+    </script>
+</html>

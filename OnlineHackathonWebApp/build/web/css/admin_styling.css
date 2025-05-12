@@ -1,0 +1,324 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #100053;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.main-content {
+    flex: 1;
+    padding: 30px;
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+    
+}
+.main_content {
+    flex: 1;
+    padding: 30px;
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+    
+}
+.main-content img{
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.sidebar {
+    width: 250px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin: 15px 0;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background-color: #100053;
+    padding-left: 20px;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.top-bar .welcome-message h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+.top-bar .welcome-message h1 span {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.notifications button {
+    padding: 12px 20px;
+    background-color: #100053;
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.notifications button:hover {
+    background-color: blue;
+}
+
+.notifications button i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.notification-panel {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.notification-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-panel li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.stats-box {
+    background-color: #100053;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+.stats-box:hover {
+    background-color: #3e0099;
+    transform: scale(1.1);
+}
+
+.stats-box h3 {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3e0099;
+    transform: scale(1.05);
+}
+.hackathon_grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px;
+    padding: 20px;
+}
+.hackathon_container {
+    background-color: #000; /* black background */
+    color: #fff; /* white text for contrast */
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+.hackathon_container h4 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #21ced7;
+}
+
+.hackathon_container p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.hackathon_container button {
+    padding: 10px 16px;
+    margin-right: 10px;
+    background-color: #21ced7;
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.hackathon_container button:hover {
+    background-color: #3e0099;
+    transform: scale(1.1);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    color: white;
+
+    background-color: #100053;
+}
+
+table td button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+table td button:hover {
+   background-color: #3e0099;
+    transform: scale(1.1);
+}
+
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
+}
+.stats-box {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    transition: all 0.3s ease-in-out;
+}
+.stats-box:hover {
+    background-color: #3e0099;
+    transform: scale(1.1);
+}
+
+.stats-box h3 {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color:  #21ced7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    transform: scale(1.05);
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: black;
+    color: white;
+}
+
+table td button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+table td button:hover {
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    transform: scale(1.05);
+}

@@ -1,0 +1,261 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: arial sans-serif;
+}
+.header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #070d32;
+    color: white;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+}
+.logo img{
+    height: 75px;
+    width: 75px;
+}
+.nav_links{
+
+}
+.nav_links ul{
+    display: flex;
+}
+.nav_links ul li{
+    padding: 10px 10px;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+.nav_links ul li a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.nav_links ul li a:hover{
+    color: #595a8b;
+}
+.home_container{
+
+    display: flex;
+    height: 100%;
+}
+
+.home_content{
+    width: 100%;
+    padding: 20px 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: #f3f2f4;
+}
+.home_content button{
+
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.home_content button:hover{
+    background-color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+.features{
+    position: relative;
+    width: 100%
+}
+.features img{
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.features button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.features button:hover {
+    background-color: #100053;
+}
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 0.4s ease-out forwards;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: red;
+    transform: scale(1.4);
+}
+
+input {
+    width: 90%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Login Button */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #100053;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3e0099;
+    transform: scale(1.2);
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.login_options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login_options hr {
+    border: 1px solid #100053;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.login_options p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.login_options ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login_options ul li {
+    display: inline-block;
+}
+
+.login_options ul li a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.login_options ul li a img:hover {
+    transform: scale(1.2);
+}
+
+.register_here {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register_here p {
+    font-size: 1rem;
+    color: black;
+}
+
+.register_here a {
+    color: #100053;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register_here a:hover {
+    text-decoration: underline;
+}
+
+.forgot_password {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot_password a {
+    font-size: 1rem;
+    color: #100053;
+    text-decoration: none;
+}
+
+.forgot_password a:hover {
+    text-decoration: underline;
+}
